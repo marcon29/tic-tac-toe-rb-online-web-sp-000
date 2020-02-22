@@ -120,6 +120,7 @@ end
 def play(board)
 	until over?(board) == true
     turn(board)
+    over?(board)
   end
 
   if won?(board).class == Array
