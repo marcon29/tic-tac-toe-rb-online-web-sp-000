@@ -102,7 +102,7 @@ end
 
 # end game - checks if game over, displays appropriate message
 def over?(board)
-  if won?(board).class != nil
+  if won?(board).class != false
     true
   elsif full?(board) == true || draw?(board) == true
     true
