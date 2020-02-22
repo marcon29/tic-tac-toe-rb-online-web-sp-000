@@ -120,7 +120,6 @@ end
 def play(board)
 	until over?(board) == true
     turn(board)
-    won?(board)
   end
 
   if won?(board) != nil
