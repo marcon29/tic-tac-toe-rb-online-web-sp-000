@@ -118,11 +118,11 @@ def over?(board)
   #result = false
   if won?(board).class == Array
     #puts "Congratulations #{winner(board)}!"
-    #result = 
+    #result =
     true
   elsif draw?(board) == true
     #puts "Cat's Game!"
-    #result = 
+    #result =
     true
   end
   #result
