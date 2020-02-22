@@ -122,7 +122,7 @@ end
 def play(board)
 	until over?(board) == true
     turn(board)
-    
+
     if won?(board).class == Array
       puts "Congratulations #{winner(board)}!"
     elsif draw?(board) == true
