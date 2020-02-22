@@ -124,6 +124,5 @@ def play(board)
     turn(board)
     over?(board)
     current_player(board)
-    end
   end
 end
