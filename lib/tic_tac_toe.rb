@@ -137,12 +137,8 @@ def play(board)
     #full?(board)
     #won?(board)
     #draw?(board)
-    if won?(board).class == Array
-			puts "Congratulations #{winner(board)}!"
-		elsif draw?(board) == true
-			puts "Cat's Game!"
-		else
-			current_player(board)
+    over?(board)
+    current_player(board)
     end
   end
 end
