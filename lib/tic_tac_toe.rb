@@ -110,10 +110,10 @@ end
 # end game - checks if game over, displays appropriate message
 def over?(board)
   if won?(board).class == Array
-    puts "Congratulations #{winner(board)}!"
+    #puts "Congratulations #{winner(board)}!"
     true
-  elsif draw?(board) == true
-    puts "Cat's Game!"
+  elsif full?(board) == true
+    #puts "Cat's Game!"
     true
   end
 end
