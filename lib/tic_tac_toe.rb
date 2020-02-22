@@ -100,20 +100,19 @@ def draw?(board)
 	full?(board) == true && won?(board) == nil
 end
 
-# checks which player won
-def winner(board)
-	if won?(board).class == Array
-		board[won?(board)[0]]
-  end
-end
-
-
 # end game - checks if game over, displays appropriate message
 def over?(board)
   if won?(board).class == Array
     true
   elsif full?(board) == true || draw?(board) == true
     true
+  end
+end
+
+# checks which player won
+def winner(board)
+	if won?(board).class == Array
+		board[won?(board)[0]]
   end
 end
 
