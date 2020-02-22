@@ -113,15 +113,17 @@ end
 
 # end game - check to play again, validates answer, restarts or closes down
 def over?(board)
-  result = false
+  #result = false
   if won?(board).class == Array
     #puts "Congratulations #{winner(board)}!"
-    result = true
+    #result = 
+    true
   elsif draw?(board) == true
     #puts "Cat's Game!"
-    result = true
+    #result = 
+    true
   end
-  result
+  #result
 end
 
 # executes a full game loop
