@@ -132,9 +132,9 @@ end
 def play(board)
 	while over?(board) == false
     turn(board)
-    #over?(board)
-    #winner(board)
-    #current_player(board)
+    over?(board)
+    winner(board)
+    current_player(board)
     #full?(board)
     #won?(board)
     #draw?(board)
