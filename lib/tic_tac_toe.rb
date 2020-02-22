@@ -56,6 +56,7 @@ def turn(board)
 	if valid_move?(board, index)
 		move(board, index, current_player(board))
 		display_board(board)
+    over?(board)
 	else
 		turn(board)
 	end
@@ -98,7 +99,10 @@ end
 # displays message to players???
 def winner(board)
 	if won?(board).class == Array
-		board[won?(board)[0]]
+		#board[won?(board)[0]]
+    puts "Congratulations #{board[won?(board)[0]]}!"
+  elsif draw?(board) == true
+    puts "Cat's Game!"
 	end
 end
 
@@ -111,11 +115,11 @@ end
 def over?(board)
   #result = false
   if won?(board).class == Array
-    puts "Congratulations #{winner(board)}!"
+    #puts "Congratulations #{winner(board)}!"
     #result =
     true
   elsif draw?(board) == true
-    puts "Cat's Game!"
+    #puts "Cat's Game!"
     #result =
     true
   end
@@ -126,6 +130,7 @@ end
 def play(board)
 	while over?(board) == false
     turn(board)
+    winner(board)
     #over?(board)
     #won?(board)
     #draw?(board)
