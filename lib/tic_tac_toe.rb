@@ -1,3 +1,5 @@
+# -> lib/tic_tac_toe.rb
+
 WIN_COMBINATIONS = [
   [0, 1, 2],
   [3, 4, 5],
