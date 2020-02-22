@@ -111,10 +111,8 @@ end
 
 # checks which player won
 def winner(board)
-	if won?(board) != nil
+	if won?(board).class == Array
 		board[won?(board)[0]]
-  else
-    false
   end
 end
 
