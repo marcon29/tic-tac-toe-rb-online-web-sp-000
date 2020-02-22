@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-02-22T23:14:33+00:00">2020-02-22T23:14:33+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-02-22T23:18:23+00:00">2020-02-22T23:18:23+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         35.7
+         34.9
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>64</td>
         <td>59</td>
         <td>5</td>
-        <td>35.7</td>
+        <td>34.9</td>
       </tr>
       
     </tbody>
@@ -600,20 +600,20 @@
           <code class="ruby">def won?(board)</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="86">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="34" data-linenumber="86">
+          <span class="hits">34</span>
           
           <code class="ruby">  win_array = WIN_COMBINATIONS.select do |win_combo|</code>
         </li>
       
-        <li class="covered" data-hits="781" data-linenumber="87">
-          <span class="hits">781</span>
+        <li class="covered" data-hits="714" data-linenumber="87">
+          <span class="hits">714</span>
           
           <code class="ruby">    win_combo.all? { |win_index| board[win_index] == &quot;X&quot;} ||</code>
         </li>
       
-        <li class="covered" data-hits="330" data-linenumber="88">
-          <span class="hits">330</span>
+        <li class="covered" data-hits="299" data-linenumber="88">
+          <span class="hits">299</span>
           
           <code class="ruby">    win_combo.all? { |win_index| board[win_index] == &quot;O&quot;}</code>
         </li>
@@ -624,8 +624,8 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="90">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="34" data-linenumber="90">
+          <span class="hits">34</span>
           
           <code class="ruby">  win_array[0]</code>
         </li>
@@ -654,8 +654,8 @@
           <code class="ruby">def full?(board)</code>
         </li>
       
-        <li class="covered" data-hits="134" data-linenumber="95">
-          <span class="hits">134</span>
+        <li class="covered" data-hits="180" data-linenumber="95">
+          <span class="hits">180</span>
           
           <code class="ruby">  !(board.any? { |space| space == &quot; &quot; })</code>
         </li>
@@ -684,8 +684,8 @@
           <code class="ruby">def draw?(board)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="100">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="18" data-linenumber="100">
+          <span class="hits">18</span>
           
           <code class="ruby">	full?(board) == true &amp;&amp; won?(board) == nil</code>
         </li>
@@ -717,23 +717,23 @@
         <li class="covered" data-hits="17" data-linenumber="105">
           <span class="hits">17</span>
           
-          <code class="ruby">  if won?(board) != nil</code>
+          <code class="ruby">  if full?(board) == true || draw?(board) == true</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="106">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="106">
+          <span class="hits">3</span>
           
           <code class="ruby">    true</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="107">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="14" data-linenumber="107">
+          <span class="hits">14</span>
           
-          <code class="ruby">  elsif full?(board) == true || draw?(board) == true</code>
+          <code class="ruby">  elsif won?(board) != nil</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="108">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="108">
+          <span class="hits">5</span>
           
           <code class="ruby">    true</code>
         </li>
