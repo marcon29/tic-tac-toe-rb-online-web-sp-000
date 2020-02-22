@@ -62,6 +62,12 @@ def turn(board)
 	else
 		turn(board)
 	end
+
+  if over?(board) == true
+    winner(board)
+  else
+    current_player(board)
+  end
 end
 
 # tracks number of turn have been taken
@@ -132,9 +138,9 @@ end
 def play(board)
 	while over?(board) == false
     turn(board)
-    over?(board)
-    winner(board)
-    current_player(board)
+    #over?(board)
+    #winner(board)
+    #current_player(board)
     #full?(board)
     #won?(board)
     #draw?(board)
