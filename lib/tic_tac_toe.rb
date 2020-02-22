@@ -111,7 +111,7 @@ end
 
 # checks which player won
 def winner(board)
-	if won?(board) != false 
+	if won?(board) != false
 		board[won?(board)[0]]
   end
 end
@@ -122,7 +122,7 @@ def play(board)
     turn(board)
   end
 
-  if won?(board) != false 
+  if won?(board) != false
     puts "Congratulations #{winner(board)}!"
   elsif draw?(board) == true
     puts "Cat's Game!"
