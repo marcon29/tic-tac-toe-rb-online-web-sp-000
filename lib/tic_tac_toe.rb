@@ -109,13 +109,24 @@ end
 
 # end game - check to play again, validates answer, restarts or closes down
 def over?(board)
-	if full?(board) == true
-		true
-	elsif won?(board).class == Array
-		true
-	end
+  result = false
+  if won?(board).class == Array
+    puts "Congratulations #{winner(board)}!"
+    result = true
+  elsif draw?(board) == true
+    puts "Cat's Game!"
+    result = true
+  end
+  result
 end
 
 # executes a full game loop
-def play
+def play(board)
+	while over?(board) == false
+    turn(board)
+    #over?(board)
+    #won?(board)
+    #draw?(board)
+    current_player(board)
+  end
 end
