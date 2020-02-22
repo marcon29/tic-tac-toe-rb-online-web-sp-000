@@ -1,12 +1,12 @@
 WIN_COMBINATIONS = [
-	[0, 1, 2]
-	[3, 4, 5]
-	[6, 7, 8]
-	[0, 3, 6]
-	[1, 4, 7]
-	[2, 5, 8]
-	[0, 4, 8]
-	[2, 4, 6]
+	[0, 1, 2],
+	[3, 4, 5],
+	[6, 7, 8],
+	[0, 3, 6],
+	[1, 4, 7],
+	[2, 5, 8],
+	[0, 4, 8],
+	[2, 4, 6],
 ]
 
 # defines board
@@ -23,11 +23,11 @@ def input_to_index(user_input)
 	user_input.to_i - 1
 end
 
-def position_empty?(board, index)
-	if board[index] == " "
+def position_taken?(board, location)
+	if board[location] != " " && board[location] != ""
+		puts "That space is already taken."
 		true
 	else
-		puts "That space is already taken."
 		false
 	end
 end
@@ -35,7 +35,7 @@ end
 # move validation code
 def valid_move?(board, index)
 	if index.between?(0,8)
-		position_empty?(board, index)
+		!position_taken?(board, index)
 	else
 		puts "That space is not on the board."
 		false
@@ -43,7 +43,7 @@ def valid_move?(board, index)
 end
 
 # updates board with player moves
-def move(board, index, current_player="X")
+def move(board, index, current_player)
 	board[index] = current_player
 end
 
@@ -54,7 +54,7 @@ def turn(board)
 	index = input_to_index(input)
 
 	if valid_move?(board, index)
-		move(board, index)
+		move(board, index, current_player(board))
 		display_board(board)
 	else
 		turn(board)
@@ -69,6 +69,7 @@ def turn_count(board)
 		play_count += 1
 		end
 	end
+	play_count
 end
 
 #switches players
@@ -82,16 +83,16 @@ end
 
 # checks win, returns array of winning board indices, if no win, returns empty array
 def won?(board)
-	result = WIN_COMBINATIONS.select do |win_combo|
-		win_combo.all? { |win_index| board[win_index] == "X"} ||
-		win_combo.all? { |win_index| board[win_index] == "O"}
-	end
-	result[0]
+  win_array = WIN_COMBINATIONS.select do |win_combo|
+    win_combo.all? { |win_index| board[win_index] == "X"} ||
+    win_combo.all? { |win_index| board[win_index] == "O"}
+  end
+  win_array[0]
 end
 
 # check if board is full
 def full?(board)
-	!(board.any? { |space| space == " " })
+  !(board.any? { |space| space == " " })
 end
 
 # displays message to players???
