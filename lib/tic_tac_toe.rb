@@ -56,11 +56,6 @@ def turn(board)
 	if valid_move?(board, index)
 		move(board, index, current_player(board))
 		display_board(board)
-    #over?(board)
-    #won?(board)
-    #draw?(board)
-    #winner(board)
-    #current_player(board)
 	else
 		turn(board)
 	end
@@ -112,31 +107,21 @@ def draw?(board)
 	full?(board) == true && won?(board) == nil
 end
 
-# end game - check to play again, validates answer, restarts or closes down
+# end game - checks if game over, displays appropriate message
 def over?(board)
-  #result = false
   if won?(board).class == Array
     puts "Congratulations #{winner(board)}!"
-    #result =
     true
   elsif draw?(board) == true
     puts "Cat's Game!"
-    #result =
     true
   end
-  #result
 end
 
 # executes a full game loop
 def play(board)
 	while over?(board) == false
     turn(board)
-    #over?(board)
-    #winner(board)
-    #current_player(board)
-    #full?(board)
-    #won?(board)
-    #draw?(board)
     over?(board)
     current_player(board)
     end
