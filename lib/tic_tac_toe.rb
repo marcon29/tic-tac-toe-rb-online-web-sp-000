@@ -120,13 +120,14 @@ end
 def play(board)
 	while over?(board) == false
     turn(board)
+  end
 
-    if won?(board).class == Array
-      puts "Congratulations #{winner(board)}!"
-    elsif draw?(board) == true
-      puts "Cat's Game!"
-    else
-      current_player(board)
-    end
+  if won?(board).class == Array
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?(board) == true
+    puts "Cat's Game!"
+  else
+    current_player(board)
   end
 end
+
