@@ -56,7 +56,9 @@ def turn(board)
 	if valid_move?(board, index)
 		move(board, index, current_player(board))
 		display_board(board)
-    over?(board)
+    #over?(board)
+    #won?(board)
+    #draw?(board)
     #winner(board)
     #current_player(board)
 	else
@@ -98,11 +100,11 @@ def full?(board)
   !(board.any? { |space| space == " " })
 end
 
-# displays message to players???
+# checks which player won
 def winner(board)
 	if won?(board).class == Array
 		board[won?(board)[0]]
-	end
+  end
 end
 
 # displays message to players???
@@ -114,11 +116,11 @@ end
 def over?(board)
   #result = false
   if won?(board).class == Array
-    #puts "Congratulations #{winner(board)}!"
+    puts "Congratulations #{winner(board)}!"
     #result =
     true
   elsif draw?(board) == true
-    #puts "Cat's Game!"
+    puts "Cat's Game!"
     #result =
     true
   end
