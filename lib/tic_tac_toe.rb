@@ -102,9 +102,6 @@ end
 def winner(board)
 	if won?(board).class == Array
 		board[won?(board)[0]]
-    puts "Congratulations #{board[won?(board)[0]]}!"
-  elsif draw?(board) == true
-    puts "Cat's Game!"
 	end
 end
 
