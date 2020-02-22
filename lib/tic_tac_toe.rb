@@ -118,8 +118,10 @@ end
 
 # executes a full game loop
 def play(board)
-	until over?(board) == true
+  counter = false
+  until counter == true
     turn(board)
+    counter = over?(board)
   end
 
   if won?(board) != nil
