@@ -112,7 +112,7 @@ end
 def over?(board)
   if won?(board).class == Array
     true
-  elsif full?(board) == true || draw?(board) == false
+  elsif full?(board) == true || draw?(board) == true
     true
   end
 end
