@@ -122,10 +122,10 @@ def play(board)
     turn(board)
   end
 
-  if won?(board) != nil
-    puts "Congratulations #{winner(board)}!"
-  elsif draw?(board) == true
+  if draw?(board) == true
     puts "Cat's Game!"
+  elsif won?(board) != nil
+    puts "Congratulations #{winner(board)}!"
   else
     current_player(board)
   end
