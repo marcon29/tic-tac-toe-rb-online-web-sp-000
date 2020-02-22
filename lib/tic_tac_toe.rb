@@ -62,6 +62,8 @@ def turn(board)
 
   if over?(board) == true
     winner(board)
+  else
+    current_player(board)
   end
 end
 
@@ -137,6 +139,6 @@ def play(board)
     #over?(board)
     #won?(board)
     #draw?(board)
-    current_player(board)
+    #current_player(board)
   end
 end
