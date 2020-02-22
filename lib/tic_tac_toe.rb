@@ -95,6 +95,11 @@ def full?(board)
   !(board.any? { |space| space == " " })
 end
 
+# displays message to players???
+def draw?(board)
+	full?(board) == true && won?(board) == nil
+end
+
 # checks which player won
 def winner(board)
 	if won?(board).class == Array
@@ -102,18 +107,12 @@ def winner(board)
   end
 end
 
-# displays message to players???
-def draw?(board)
-	full?(board) == true && won?(board) == nil
-end
 
 # end game - checks if game over, displays appropriate message
 def over?(board)
   if won?(board).class == Array
-    #puts "Congratulations #{winner(board)}!"
     true
-  elsif full?(board) == true
-    #puts "Cat's Game!"
+  elsif full?(board) == true || draw?(board) == false
     true
   end
 end
