@@ -130,4 +130,3 @@ def play(board)
     current_player(board)
   end
 end
-
