@@ -3,6 +3,8 @@
     "coverage": {
       "/home/abstract-convention-6456/tic-tac-toe-rb-online-web-sp-000/lib/tic_tac_toe.rb": [
         null,
+        null,
+        null,
         1,
         null,
         null,
@@ -136,6 +138,6 @@
         null
       ]
     },
-    "timestamp": 1582414932
+    "timestamp": 1582415685
   }
 }
