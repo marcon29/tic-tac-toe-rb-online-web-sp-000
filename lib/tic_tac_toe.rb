@@ -57,6 +57,7 @@ def turn(board)
 		move(board, index, current_player(board))
 		display_board(board)
     over?(board)
+    winner(board)
 	else
 		turn(board)
 	end
@@ -130,7 +131,7 @@ end
 def play(board)
 	while over?(board) == false
     turn(board)
-    winner(board)
+    #winner(board)
     #over?(board)
     #won?(board)
     #draw?(board)
