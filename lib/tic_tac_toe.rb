@@ -56,15 +56,12 @@ def turn(board)
 	if valid_move?(board, index)
 		move(board, index, current_player(board))
 		display_board(board)
+    over?(board)
+    winner(board)
+    current_player(board)
 	else
 		turn(board)
 	end
-
-  if over?(board) == true
-    winner(board)
-  else
-    current_player(board)
-  end
 end
 
 # tracks number of turn have been taken
