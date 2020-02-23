@@ -29,6 +29,8 @@ def position_taken?(board, location)
 	if board[location] != " " && board[location] != ""
 		puts "That space is already taken."
 		true
+	else
+		false
 	end
 end
 
@@ -118,9 +120,9 @@ def play(board)
     turn(board)
   end
 
-  if won?(board) != nil
+  if won?(board)
     puts "Congratulations #{winner(board)}!"
-  elsif draw?(board) == true
+  elsif draw?(board)
     puts "Cat's Game!"
   else
     current_player(board)
