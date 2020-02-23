@@ -122,6 +122,7 @@ end
 def play(board)
   until over?(board)
     turn(board)
+    puts won?(board).inspect
   end
 
   if won?(board) != nil
