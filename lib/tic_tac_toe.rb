@@ -29,8 +29,6 @@ def position_taken?(board, location)
 	if board[location] != " " && board[location] != ""
 		puts "That space is already taken."
 		true
-	else
-		false
 	end
 end
 
