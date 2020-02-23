@@ -84,29 +84,12 @@ def current_player(board)
 end
 
 # checks win, returns array of winning board indices, if no win, returns empty array
-# def won?(board)
-  # win_array = WIN_COMBINATIONS.select do |win_combo|
-    # win_combo.all? { |win_index| board[win_index] == "X"} ||
-    # win_combo.all? { |win_index| board[win_index] == "O"}
-  # end
-  # win_array[0]
-# end
-
 def won?(board)
-  WIN_COMBINATIONS.each do |win_combination|
-    win_index_1 = win_combination[0]
-    win_index_2 = win_combination[1]
-    win_index_3 = win_combination[2]
-    position_1 = board[win_index_1]
-    position_2 = board[win_index_2]
-    position_3 = board[win_index_3]
-    if ((position_1 == "X" && position_2 == "X" && position_3 == "X") || (position_1 == "O" && position_2 == "O" && position_3 == "O"))
-      return win_combination
-    else
-      # do nothing
-    end
+  win_array = WIN_COMBINATIONS.select do |win_combo|
+    win_combo.all? { |win_index| board[win_index] == "X"} ||
+    win_combo.all? { |win_index| board[win_index] == "O"}
   end
-  return nil
+  win_array[0]
 end
 
 
