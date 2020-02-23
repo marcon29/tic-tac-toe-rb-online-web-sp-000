@@ -92,7 +92,6 @@ def won?(board)
   win_array[0]
 end
 
-
 # check if board is full
 def full?(board)
   !(board.any? { |space| space == " " })
