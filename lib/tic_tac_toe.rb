@@ -120,7 +120,7 @@ end
 
 # executes a full game loop
 def play(board)
-  until over?(board) == true
+  until over?(board)
     turn(board)
   end
 
