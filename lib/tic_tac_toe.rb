@@ -109,7 +109,7 @@ end
 
 # checks which player won
 def winner(board)
-	if won?(board) != nil
+	if won?(board)
 		board[won?(board)[0]]
   end
 end
