@@ -104,9 +104,7 @@ end
 
 # end game - checks if game over, displays appropriate message
 def over?(board)
-  if won?(board) != nil || full?(board) == true || draw?(board) == true
-    true
-  end
+  won?(board) != nil || full?(board) == true || draw?(board) == true
 end
 
 # checks which player won
