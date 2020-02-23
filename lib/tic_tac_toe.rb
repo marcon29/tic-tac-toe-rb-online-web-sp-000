@@ -99,7 +99,7 @@ end
 
 # displays message to players???
 def draw?(board)
-	full?(board) && won?(board) == nil
+	full?(board) && !won?(board)
 end
 
 # end game - checks if game over, displays appropriate message
