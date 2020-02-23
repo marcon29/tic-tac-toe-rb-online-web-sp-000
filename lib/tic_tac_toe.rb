@@ -90,6 +90,7 @@ def won?(board)
     win_combo.all? { |win_index| board[win_index] == "O"}
   end
   win_array[0]
+  puts win_array[0]
 end
 
 # check if board is full
@@ -122,7 +123,6 @@ end
 def play(board)
   until over?(board)
     turn(board)
-    puts won?(board).inspect
   end
 
   if won?(board) != nil
